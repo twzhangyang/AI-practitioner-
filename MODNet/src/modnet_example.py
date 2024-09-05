@@ -7,6 +7,8 @@ onnx_model = onnxruntime.InferenceSession("modnet.onnx")
 input_name = onnx_model.get_inputs()[0].name
 output_name = onnx_model.get_outputs()[0].name
 
+print(input_name, output_name)
+
 # Load and preprocess the input image
 image = cv2.imread("image1.jpg")
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
